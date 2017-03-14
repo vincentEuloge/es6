@@ -36,17 +36,28 @@ let equation = (a, b) => a*a + b*b;
 mathematicienNewWAy = {
     nom,
     pi,
-    equatation,
+    equation,
     ville : "athenes"
 };
 console.log(mathematicienNewWAy.equation(2,3));
+
+// pour les fonction on peut les declarer d'une autre façon
+mathematicienNewWAy = {
+    nom,
+    pi,
+    equationShort(a, b) {
+        return a*a + b*b + this.pi;
+    },
+    ville : "athenes"
+};
+console.log(mathematicienNewWAy.equationShort(2,3));
 
 // ce qui se cache derriere cette nouvelle façon d'écrire permet les clé d'objet programatique
 const propManquante = "propOublie";
 mathematicienNewWAy = {
     nom,
     pi,
-    equatation,
+    equation,
     [propManquante] : "pas important",
     ville : "athenes"
 };
